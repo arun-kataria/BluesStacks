@@ -75,7 +75,7 @@ export default {
     live: [{
         "name": "Auto Chess",
         "region": "US",
-        "createdOn": 1559807714999,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Test Whatsapp",
         "csv": "Some CSV link for Whatsapp",
         "report": "Some report link for Whatsapp",
@@ -84,7 +84,7 @@ export default {
       {
         "name": "Super Jewels Quest",
         "region": "CA, FR",
-        "createdOn": 1559806715124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Super Jewels Quest",
         "csv": "Some CSV link for Super Jewels Quest",
         "report": "Some report link for Super Jewels Ques",
@@ -93,7 +93,7 @@ export default {
       {
         "name": "Mole Slayer",
         "region": "FR",
-        "createdOn": 1559806711124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mole Slayer",
         "csv": "Some CSV link for Mole Slayer",
         "report": "Some report link for Mole Slayer",
@@ -102,7 +102,7 @@ export default {
       {
         "name": "Flow Free",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -111,7 +111,7 @@ export default {
       {
         "name": "Summores War",
         "region": "US",
-        "createdOn": 1559806680124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -120,7 +120,7 @@ export default {
       {
         "name": "Need for Speed",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -129,7 +129,7 @@ export default {
       {
         "name": "Garena free Fire",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -138,7 +138,7 @@ export default {
       {
         "name": "Shadow Fight 3",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": new Date().getTime(),
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -157,7 +157,7 @@ export default {
       {
         "name": "Super Jewels Quest",
         "region": "CA, FR",
-        "createdOn": 1559806715124,
+        "createdOn": 1555405205999,
         "price": "Price info of Super Jewels Quest",
         "csv": "Some CSV link for Super Jewels Quest",
         "report": "Some report link for Super Jewels Ques",
@@ -175,7 +175,7 @@ export default {
       {
         "name": "Flow Free",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": 1557651605999,
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -184,7 +184,7 @@ export default {
       {
         "name": "Summores War",
         "region": "US",
-        "createdOn": 1559806680124,
+        "createdOn": 1587283605999,
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -193,7 +193,7 @@ export default {
       {
         "name": "Need for Speed",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": 1552651605999,
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",
@@ -202,7 +202,7 @@ export default {
       {
         "name": "Garena free Fire",
         "region": "JP",
-        "createdOn": 1559806680124,
+        "createdOn": 1547283605999,
         "price": "Price info of Mancala Mix",
         "csv": "Some CSV link for Mancala Mix",
         "report": "Some report link for Mancala Mix",

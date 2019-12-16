@@ -6,9 +6,13 @@ export default function CampaignRow(props) {
     const [value, setValue] = React.useState(false);
     const [modelValue, setModalValue] = React.useState({});
     function daysAgo(timeStamp) {
-        let label = ' Days Ago';
-        let days = moment((new Date(timeStamp)).toUTCString()).diff(moment(), 'days')
-        return days + label;
+        let days = moment((new Date(timeStamp)).toUTCString()).diff(moment(), 'days');
+        let result = ''
+        if (days > 1)
+            result = days + ' Days to Go';
+        else if (days < 1)
+            result = Math.abs(days) + ' Days Ago'
+        return result;
     }
     function pricingPopUp(item) {
         setModalValue(item)
@@ -59,13 +63,17 @@ export default function CampaignRow(props) {
             >
                 <div className='model-main'>
                     <div className='model-first-div'>
-                    <img className='model-img' src={modelValue.image_url} alt='campaign-img' />
+                        <img className='model-img' src={modelValue.image_url} alt='campaign-img' />
+                        <span className='model-name'>{modelValue.name}</span>
+                        <span className='model-region'>{modelValue.region}</span>
                     </div>
-                    <div>
-
+                    <div className='model-secound-div'>
+                        <div className='model-pricing-text'>Pricing</div>
+                        <div className='model-pricing-text-first'><span>1 Week - 1 Month</span><span className='model-rate-text'>$100.00</span></div>
+                        <div className='model-pricing-text-first'><span>6 Months</span><span className='model-rate-text'>$500.00</span></div>
+                        <div className='model-pricing-text-first'><span>1 Year</span><span className='model-rate-text'>$900.00</span></div>
                     </div>
-
-                    <div onClick={closeModal}>Close</div>
+                    <div className='model-close-div'><div className='model-close-button' onClick={closeModal}>Close</div> </div>
                 </div>
             </Modal>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Campagins from './components/campaigns';
-import Header from './components/header';
 import './App.css';
 
 function App() {
