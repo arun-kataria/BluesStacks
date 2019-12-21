@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import CampaignsTable from './campaign-table';
 import CampaignData from '../Data/Campaigns';
+import moment from 'moment';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,6 +52,41 @@ export default function FullWidthTabs() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const [campaignData, setCampData] = React.useState(CampaignData);
+  const [campaignUpcomming, setCampUpcomming] = React.useState([]);
+  const [campaignLive, setCampLive] = React.useState([]);
+  const [campaignPast, setCampPast] = React.useState([]);
+
+  function arrangeData(campData) {
+    let upcomming = [],
+      live = [],
+      past = [];
+    campData.forEach(element => {
+      let days = moment((new Date(element.createdOn)).toUTCString()).diff(moment(), 'days');
+      if (days > 1)
+        upcomming.push(element)
+      else if (days == 0)
+        live.push(element)
+      else past.push(element)
+    })
+    console.log("leive -- ", live.length);
+    setCampUpcomming(upcomming)
+    setCampLive(live)
+    setCampPast(past)
+  }
+
+  React.useEffect(() => {
+    arrangeData(campaignData);
+  }, [])
+
+  function changes(item) {
+    campaignData.forEach(ele => {
+      if (ele.id == item.id)
+        ele = item;
+    })
+    setCampData(campaignData);
+    arrangeData(campaignData)
+  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -82,13 +118,13 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <CampaignsTable Items={CampaignData.upcoming} />
+          <CampaignsTable Items={campaignUpcomming} Callback={changes} />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <CampaignsTable Items={CampaignData.live}/>
+          <CampaignsTable Items={campaignLive} Callback={changes} />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <CampaignsTable Items={CampaignData.past}/>
+          <CampaignsTable Items={campaignPast} Callback={changes} />
         </TabPanel>
       </SwipeableViews>
     </div>

@@ -1,9 +1,14 @@
+import 'date-fns';
 import React from 'react';
 import moment from 'moment';
 import Modal from '@material-ui/core/Modal';
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 
 export default function CampaignRow(props) {
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
     const [value, setValue] = React.useState(false);
+    const [datePop, datePopSetValue] = React.useState(false);
     const [modelValue, setModalValue] = React.useState({});
     function daysAgo(timeStamp) {
         let days = moment((new Date(timeStamp)).toUTCString()).diff(moment(), 'days');
@@ -14,9 +19,19 @@ export default function CampaignRow(props) {
             result = Math.abs(days) + ' Days Ago'
         return result;
     }
+
+    const handleDateChange = date => {
+        setSelectedDate(date);
+    };
+
+    function updateDate(item) {
+        item.createdOn = new Date(selectedDate).getTime();
+        props.Callback(item);
+        datePopSetValue(false)
+    }
+
     function pricingPopUp(item) {
         setModalValue(item)
-        console.log("item=== ", item);
         setValue(true)
     }
     function closeModal() {
@@ -48,7 +63,7 @@ export default function CampaignRow(props) {
                     <img className="pos-abso row-img-small" src={'/images/report.png'} alt='price' />
                     <span className='pos-abso row-font-size-colour row-text-top row-report'>Report</span>
                 </div>
-                <div className='table-row-set row-schedule'>
+                <div className='table-row-set row-schedule' onClick={() => datePopSetValue(true)}>
                     <img className="pos-abso row-img-small" src={'/images/calendar.png'} alt='price' />
                     <span className='pos-abso row-font-size-colour row-text-top row-report'>Schedule Again</span>
                 </div>
@@ -74,6 +89,34 @@ export default function CampaignRow(props) {
                         <div className='model-pricing-text-first'><span>1 Year</span><span className='model-rate-text'>$900.00</span></div>
                     </div>
                     <div className='model-close-div'><div className='model-close-button' onClick={closeModal}>Close</div> </div>
+                </div>
+            </Modal>
+            <Modal
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description"
+                closeAfterTransition
+                open={datePop}
+            >
+                <div className='date-model'>
+                    <span className='date-model-close-sign' onClick={() => datePopSetValue(false)}>X</span>
+                    <div className='date-mode-selecter'>
+                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="MM/dd/yyyy"
+                                margin="normal"
+                                id="date-picker-inline"
+                                label="Schedule Again"
+                                value={moment((new Date(props.Item.createdOn)).toUTCString()).format("MM/DD/YYYY")}
+                                onChange={handleDateChange}
+                                KeyboardButtonProps={{
+                                    'aria-label': 'change date',
+                                }}
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                    <div className='model-close-div date-model-close'><div className='model-close-button' onClick={() => updateDate(props.Item)}>Save</div> </div>
                 </div>
             </Modal>
         </div>
