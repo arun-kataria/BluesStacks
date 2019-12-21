@@ -9,7 +9,7 @@ export default function CampaignRow(props) {
         let days = moment((new Date(timeStamp)).toUTCString()).diff(moment(), 'days');
         let result = ''
         if (days > 1)
-            result = days + ' Days to Go';
+            result = days + ' Days Ahead';
         else if (days < 1)
             result = Math.abs(days) + ' Days Ago'
         return result;
