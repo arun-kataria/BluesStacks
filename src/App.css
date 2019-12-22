@@ -297,18 +297,48 @@
   width: 400px;
   margin: auto;
 }
-.date-model-close{
+
+.date-model-close {
   position: absolute;
   bottom: 5px;
 }
-.date-mode-selecter{
+
+.date-mode-selecter {
   position: absolute;
   margin-left: 20%;
   margin-top: 4%;
   margin-right: 20%;
 }
-.date-model-close-sign{
+
+.date-model-close-sign {
   position: absolute;
   right: 7px;
   cursor: pointer;
+}
+
+.formSelectLabel {
+  position: absolute;
+  left: 16px;
+  top: 3px;
+  font-size: 10px;
+}
+
+.selectBox {
+  border-radius: 6px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .15);
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  height: 48px;
+  margin: 0 0 7px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.language-dropdown {
+  position: absolute;
+  width: 11%;
+  right: 2%;
+  top: 10px;
 }

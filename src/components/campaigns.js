@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import CampaignsTable from './campaign-table';
 import CampaignData from '../Data/Campaigns';
 import moment from 'moment';
+import { useTranslation } from 'react-i18next';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,6 +57,7 @@ export default function FullWidthTabs() {
   const [campaignUpcomming, setCampUpcomming] = React.useState([]);
   const [campaignLive, setCampLive] = React.useState([]);
   const [campaignPast, setCampPast] = React.useState([]);
+  const { t } = useTranslation();
 
   function arrangeData(campData) {
     let upcomming = [],
@@ -69,7 +71,6 @@ export default function FullWidthTabs() {
         live.push(element)
       else past.push(element)
     })
-    console.log("leive -- ", live.length);
     setCampUpcomming(upcomming)
     setCampLive(live)
     setCampPast(past)
@@ -107,9 +108,9 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Upcoming Campaigns" {...a11yProps(0)} />
-          <Tab label="Live Campaigns" {...a11yProps(1)} />
-          <Tab label="Past Campaigns" {...a11yProps(2)} />
+          <Tab label={t("Upcoming Campaigns")} {...a11yProps(0)} />
+          <Tab label={t("Live Campaigns")} {...a11yProps(1)} />
+          <Tab label={t("Past Campaigns")} {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
