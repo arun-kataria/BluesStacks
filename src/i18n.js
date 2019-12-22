@@ -6,7 +6,7 @@ const resources = {
     translation: {
       "Manage Campaigns": "Manage Campaigns",
       "Date": "DATE",
-      "CAMPAGIN": "CAMPAGIN",
+      "CAMPAIGN": "CAMPAIGN",
       "VIEW": "VIEW",
       "ACTIONS": "ACTIONS",
       "No Records Found!": "No Records Found!",
@@ -22,7 +22,7 @@ const resources = {
     translation: {
       "Manage Campaigns": "管理运动",
       "Date": "日期",
-      "CAMPAGIN": "运动",
+      "CAMPAIGN": "运动",
       "VIEW": "视图",
       "ACTIONS": "行动",
       "No Records Found!": "没有找到记录！",
@@ -69,7 +69,7 @@ const resources = {
     translation: {
       "Manage Campaigns": "管理キャンペーン",
       "Date": "日付",
-      "CAMPAGIN": "運動",
+      "CAMPAIGN": "運動",
       "VIEW": "見る",
       "ACTIONS": "行動",
       "No Records Found!": "レコードが見つかりません！",

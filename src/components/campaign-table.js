@@ -11,7 +11,7 @@ export default function ReactVirtualizedTable(props) {
             {props.Items && props.Items.length ?
                 <div className="table-header">
                     <div className='table-header-item table-header-item-date'>{t('Date')}</div>
-                    <div className='table-header-item table-header-item-campaign'>{t('CAMPAGIN')}</div>
+                    <div className='table-header-item table-header-item-campaign'>{t('CAMPAIGN')}</div>
                     <div className='table-header-item table-header-item-width'>{t('VIEW')}</div>
                     <div className='table-header-item table-header-item-width'>{t('ACTIONS')}</div>
                     {props.Items.map(element => <CampaignRow Item={element} Callback={props.Callback} />)}
