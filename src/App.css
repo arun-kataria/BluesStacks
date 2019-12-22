@@ -110,7 +110,7 @@
 @media screen and (max-width: 460px) {
   .header {
     position: absolute;
-    width: 1065px !important;
+    width: 1079px !important;
     height: 13%;
     background-color: #252a42;
   }
@@ -125,6 +125,34 @@
   }
 }
 
+@media screen and (width: 823px) {
+  .header {
+    width: 142% !important;
+  }
+}
+
+@media screen and (width: 568px) {
+  .header {
+    width: 196% !important;
+  }
+}
+
+@media screen and (width: 667px) {
+  .header {
+    width: 170% !important;
+  }
+}
+
+@media screen and (width: 736px) {
+  .header {
+    width: 156% !important;
+  }
+}
+
+@media screen and (width: 375px) {.header {width: 287% !important;}}
+@media screen and (width: 812px) {.header {width: 144% !important;}}
+@media screen and (width: 360px) {.header {width: 299% !important;}}
+@media screen and (width: 731px) {.header {width: 157% !important;}}
 
 @media screen and (width: 1024px) {
 
@@ -245,7 +273,7 @@
 .model-main {
   position: absolute;
   width: 370px;
-  top: 22%;
+  top: 13%;
   background-color: white;
   height: 430px;
   margin-left: 32%;

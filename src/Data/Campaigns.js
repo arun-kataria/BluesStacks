@@ -82,7 +82,7 @@ export default [
   {
     "name": "Auto Chess",
     "region": "US",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Test Whatsapp",
     "csv": "Some CSV link for Whatsapp",
     "report": "Some report link for Whatsapp",
@@ -92,7 +92,7 @@ export default [
   {
     "name": "Super Jewels Quest",
     "region": "CA, FR",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Super Jewels Quest",
     "csv": "Some CSV link for Super Jewels Quest",
     "report": "Some report link for Super Jewels Ques",
@@ -102,7 +102,7 @@ export default [
   {
     "name": "Mole Slayer",
     "region": "FR",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Mole Slayer",
     "csv": "Some CSV link for Mole Slayer",
     "report": "Some report link for Mole Slayer",
@@ -112,7 +112,7 @@ export default [
   {
     "name": "Flow Free",
     "region": "JP",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Mancala Mix",
     "csv": "Some CSV link for Mancala Mix",
     "report": "Some report link for Mancala Mix",
@@ -122,7 +122,7 @@ export default [
   {
     "name": "Summores War",
     "region": "US",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Mancala Mix",
     "csv": "Some CSV link for Mancala Mix",
     "report": "Some report link for Mancala Mix",
@@ -132,7 +132,7 @@ export default [
   {
     "name": "Need for Speed",
     "region": "JP",
-    "createdOn": 1576939284493,
+    "createdOn": new Date().getTime(),
     "price": "Price info of Mancala Mix",
     "csv": "Some CSV link for Mancala Mix",
     "report": "Some report link for Mancala Mix",
@@ -188,55 +188,5 @@ export default [
     "report": "Some report link for Mole Slayer",
     "image_url": "/images/Pubg.png",
     "id": 18
-  },
-  {
-    "name": "Flow Free",
-    "region": "JP",
-    "createdOn": 1557651605999,
-    "price": "Price info of Mancala Mix",
-    "csv": "Some CSV link for Mancala Mix",
-    "report": "Some report link for Mancala Mix",
-    "image_url": "/images/Scalen.png",
-    "id": 19
-  },
-  {
-    "name": "Summores War",
-    "region": "US",
-    "createdOn": 1587283605999,
-    "price": "Price info of Mancala Mix",
-    "csv": "Some CSV link for Mancala Mix",
-    "report": "Some report link for Mancala Mix",
-    "image_url": "/images/Boy.png",
-    "id": 20
-  },
-  {
-    "name": "Need for Speed",
-    "region": "JP",
-    "createdOn": 1552651605999,
-    "price": "Price info of Mancala Mix",
-    "csv": "Some CSV link for Mancala Mix",
-    "report": "Some report link for Mancala Mix",
-    "image_url": "/images/Car.png",
-    "id": 21
-  },
-  {
-    "name": "Garena free Fire",
-    "region": "JP",
-    "createdOn": 1547283605999,
-    "price": "Price info of Mancala Mix",
-    "csv": "Some CSV link for Mancala Mix",
-    "report": "Some report link for Mancala Mix",
-    "image_url": "/images/Garane.png",
-    "id": 22
-  },
-  {
-    "name": "Shadow Fight 3",
-    "region": "JP",
-    "createdOn": 1559806680124,
-    "price": "Price info of Mancala Mix",
-    "csv": "Some CSV link for Mancala Mix",
-    "report": "Some report link for Mancala Mix",
-    "image_url": "/images/Ninja.png",
-    "id": 23
   }
 ]

@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "Mange Campaigns": "Mange Campaigns",
+      "Manage Campaigns": "Manage Campaigns",
       "Date": "DATE",
       "CAMPAGIN": "CAMPAGIN",
       "VIEW": "VIEW",
@@ -20,7 +20,7 @@ const resources = {
   },
   ch: {
     translation: {
-      "Mange Campaigns": "管理运动",
+      "Manage Campaigns": "管理运动",
       "Date": "日期",
       "CAMPAGIN": "运动",
       "VIEW": "视图",
@@ -67,7 +67,7 @@ const resources = {
   },
   ja: {
     translation: {
-      "Mange Campaigns": "管理キャンペーン",
+      "Manage Campaigns": "管理キャンペーン",
       "Date": "日付",
       "CAMPAGIN": "運動",
       "VIEW": "見る",

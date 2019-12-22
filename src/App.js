@@ -27,7 +27,7 @@ function App() {
           </select>
         </div>
       </div>
-      <div className='title-text'>{t('Mange Campaigns')}</div>
+      <div className='title-text'>{t('Manage Campaigns')}</div>
       <div className='camp-main-div'>
         <Campagins />
       </div>
