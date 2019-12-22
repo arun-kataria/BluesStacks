@@ -103,7 +103,7 @@
 
 @media screen and (width: 768px) {
   .header {
-    width: 1154px !important
+    width: 1157px !important
   }
 }
 
@@ -153,6 +153,7 @@
 @media screen and (width: 812px) {.header {width: 144% !important;}}
 @media screen and (width: 360px) {.header {width: 299% !important;}}
 @media screen and (width: 731px) {.header {width: 157% !important;}}
+@media screen and (width: 640px) {.header {width: 176% !important;}}
 
 @media screen and (width: 1024px) {
 

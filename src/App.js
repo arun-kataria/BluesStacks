@@ -17,6 +17,7 @@ function App() {
   }
   return (
     <div>
+    <meta name="viewport"></meta>
       <div className='header'>
         <div className='language-dropdown'>
           <label className="formSelectLabel">{t('Language')}</label>
